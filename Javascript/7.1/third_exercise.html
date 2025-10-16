@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden{
+            display: none;
+        }
+         .highlight {
+      background-color: yellow;
+      font-weight: bold;
+    }
+
+    </style>
+</head>
+<body>
+
+    <button class="toggle">toggle Visibility</button>
+    <p class="text"> this para will be shown/hidden</p>
+     <ul>
+    <li>Item One</li>
+    <li>Item Two</li>
+    <li>Item Three</li>
+  </ul>
+
+    <script>
+
+        const button=document.querySelector(".toggle");
+        const text=document.querySelector(".text");
+
+        button.addEventListener("click",()=>{
+            text.classList.toggle("hidden");
+        });
+
+         const listItems = document.querySelectorAll('li');
+
+         listItems.forEach(item=>{
+            item.classList.add("highlight");
+         })
+    </script>
+    
+</body>
+</html>

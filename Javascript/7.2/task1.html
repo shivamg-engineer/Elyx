@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">Click me</button>
+    <div id="hover-box">Hover over me!</div>
+
+
+    <script>
+        document.getElementById("btn").addEventListener("click", () => {
+            alert("Button Clicked!");
+        });
+
+        document.addEventListener("keydown", (event) => {
+            console.log(`Key pressed: ${event.key}`);
+        });
+
+        document.getElementById("hover-box").addEventListener("mouseover", () => {
+            console.log("Mouse over detected!");
+        });
+
+    </script>
+</body>
+
+</html>

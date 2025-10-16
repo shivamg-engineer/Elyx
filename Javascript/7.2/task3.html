@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+    <h2>My To-Do List</h2>
+    <input type="text" id="task-input" placeholder="Enter new task" />
+    <button id="add-task">Add Task</button>
+
+    <ul id="task-list"></ul>
+
+    <script>
+        document.getElementById("add-task").addEventListener("click", () => {
+            let taskInput = document.getElementById("task-input");
+            if (taskInput.value.trim() !== "") {
+                let newTask = document.createElement("li");
+                newTask.textContent = taskInput.value.trim();
+                document.getElementById("task-list").appendChild(newTask);
+                taskInput.value = "";
+            }
+        });
+
+        // Event delegation for removing tasks on click
+        document.getElementById("task-list").addEventListener("click", (event) => {
+            if (event.target.tagName === "LI") {
+                event.target.remove();
+            }
+        });
+    </script>
+</body>
+
+</html>

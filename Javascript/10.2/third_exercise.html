@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lazy Loading Images</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    img {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align:center;">Lazy Loaded Images</h1>
+
+  <!-- ✅ Add loading="lazy" to enable native lazy loading -->
+  <img loading="lazy" src="https://via.placeholder.com/600x400?text=Image+1" alt="Image 1">
+  <img loading="lazy" src="https://via.placeholder.com/600x400?text=Image+2" alt="Image 2">
+  <img loading="lazy" src="https://via.placeholder.com/600x400?text=Image+3" alt="Image 3">
+  <img loading="lazy" src="https://via.placeholder.com/600x400?text=Image+4" alt="Image 4">
+  <img loading="lazy" src="https://via.placeholder.com/600x400?text=Image+5" alt="Image 5">
+
+</body>
+</html>

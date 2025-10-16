@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="myParagraph">Original text</p>
+    <img id="myImage" src="old-image.jpg" alt="Old image" width="200">
+
+    <script>
+        
+        const paragraph = document.querySelector('#myParagraph');
+        paragraph.textContent = 'This is the new text content!';
+
+    
+        const image = document.querySelector('#myImage');
+        image.src = 'https://via.placeholder.com/200'; 
+    </script>
+</body>
+
+</html>

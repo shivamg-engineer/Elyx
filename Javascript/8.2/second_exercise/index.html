@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            /* text-align: center; */
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+             height: 100vh;           /* full viewport height */
+  text-align: center;
+  background: #f0f0f0;    
+        }
+.counterDiv{
+    display: flex;
+    text-align: center;
+    gap: 10px;
+  
+     
+}
+button{
+      padding: 20px 20px;
+      margin: 10px;
+}
+    </style>
+</head>
+
+<body>
+    <div class="counterDiv">
+        <button id="increase">+</button>
+        <p id="count">0</p>
+        <button id="decrease">-</button>
+    </div>
+    <div class="resetDiv">
+        <button id="reset">reset</button>
+    </div>
+    <script type="module">
+        import { increase, decrease, reset } from "./counter.js";
+
+        const increaseBtn = document.getElementById("increase");
+        const decreaseBtn = document.getElementById("decrease");
+        const resetBtn = document.getElementById("reset");
+        const countDisplay = document.getElementById("count");
+
+        let count=0;
+
+        increaseBtn.addEventListener("click",()=>{
+            count=increase(count);
+            countDisplay.textContent=count;
+        });
+        decreaseBtn.addEventListener("click",()=>{
+            count=decrease(count);
+            countDisplay.textContent=count;
+        })
+        resetBtn.addEventListener("click",()=>{
+            count=reset();
+            countDisplay.textContent=count;
+        })
+    </script>
+</body>
+
+</html>

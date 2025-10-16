@@ -1,0 +1,2 @@
+
+players.shift();

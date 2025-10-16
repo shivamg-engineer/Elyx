@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Light/Dark Mode</title>
+  <style>
+    body.light-mode {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to Light/Dark Mode</h1>
+  <button id="themeToggle">Toggle Theme</button>
+
+  <script>
+    const body = document.body;
+    const toggleButton = document.getElementById('themeToggle');
+
+    // ✅ 1. Load saved theme from localStorage on page load
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      body.classList.add(savedTheme);
+    } else {
+      body.classList.add('light-mode'); // Default theme
+    }
+
+    // ✅ 2. Toggle theme and store preference
+    toggleButton.addEventListener('click', () => {
+      if (body.classList.contains('light-mode')) {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark-mode');
+      } else {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+        localStorage.setItem('theme', 'light-mode');
+      }
+    });
+  </script>
+
+</body>
+</html>

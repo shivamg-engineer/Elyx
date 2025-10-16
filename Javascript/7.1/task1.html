@@ -1,0 +1,38 @@
+// Task: Use JavaScript to select elements dynamically.
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="main-heading">Welcome!</h1>
+
+    <p class="paragraph">Paragraph 1</p>
+    <p class="paragraph">Paragraph 2</p>
+
+    <div>div1</div>
+<div>div2</div>
+<div>div3</div>
+
+
+    <script>
+
+        let heading = document.getElementById("main-heading");
+        console.log(heading.textContent);
+
+        let paragraph = document.querySelectorAll(".paragraph");
+        paragraph.forEach(p => console.log(p.textContent));
+
+        let div= document.getElementsByTagName("div");
+        console.log(div.length);
+
+    </script>
+</body>
+
+</html>

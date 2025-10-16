@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Optimized Image Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 20px auto;
+    }
+    img {
+      width: 100%;
+      margin-bottom: 20px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Optimized Image Gallery</h1>
+
+  <img
+    src="https://via.placeholder.com/600x400.webp?text=Compressed+Image+1"
+    srcset="
+      https://via.placeholder.com/480x320.webp?text=Small+Image+1 480w,
+      https://via.placeholder.com/800x533.webp?text=Medium+Image+1 800w,
+      https://via.placeholder.com/1200x800.webp?text=Large+Image+1 1200w
+    "
+    sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+    loading="lazy"
+    alt="Image 1"
+  />
+
+  <img
+    src="https://via.placeholder.com/600x400.webp?text=Compressed+Image+2"
+    srcset="
+      https://via.placeholder.com/480x320.webp?text=Small+Image+2 480w,
+      https://via.placeholder.com/800x533.webp?text=Medium+Image+2 800w,
+      https://via.placeholder.com/1200x800.webp?text=Large+Image+2 1200w
+    "
+    sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+    loading="lazy"
+    alt="Image 2"
+  />
+
+  <!-- Add more images as needed -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll('img.lazy');
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src;
+        img.classList.remove('lazy');
+        obs.unobserve(img);
+      }
+    });
+  });
+
+  images.forEach(img => observer.observe(img));
+});
+
+</script>
+</body>
+</html>

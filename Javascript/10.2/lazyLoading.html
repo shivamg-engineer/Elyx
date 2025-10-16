@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 40px 0;
+        transition: opacity 0.6s ease;
+        opacity: 0.3;
+      }
+
+      img.loaded {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Lazy Loading Image Example</h1>
+      <p>Scroll down to load images as they appear in view 👇</p>
+
+      <img data-src="https://th.bing.com/th/id/OIP.gEOwFRXC7xWhPinUTtAxegHaHa?w=192&h=193&c=7&r=0&o=7&cb=12&dpr=1.5&pid=1.7&rm=3" alt="Image 0" />
+      <img data-src="https://th.bing.com/th/id/OIP.TyFXb0SqI3Im2zsEOAcqEwHaLH?w=115&h=180&c=7&r=0&o=7&cb=12&dpr=1.5&pid=1.7&rm=3" alt="Image 1" />
+      <img data-src="https://th.bing.com/th/id/OIP.-MTe_1gEXujVyh3gbh55eQHaFW?w=247&h=180&c=7&r=0&o=7&cb=12&dpr=1.5&pid=1.7&rm=3" alt="Image 2" />
+      <img data-src="https://th.bing.com/th/id/OIP.xXhgmDGT37SN6sQf2gG7ogHaE7?w=282&h=188&c=7&r=0&o=7&cb=12&dpr=1.5&pid=1.7&rm=3" alt="Image 3" />
+      <img data-src="https://th.bing.com/th/id/OIP.GxO83mHzJ54pBU0DFgcGQgHaE8?w=301&h=201&c=7&r=0&o=7&cb=12&dpr=1.5&pid=1.7&rm=3" alt="Image 4" />
+    </div>
+    <script src="lazyLoading.js" defer>
+         
+
+    </script>
+  </body>
+</html>
