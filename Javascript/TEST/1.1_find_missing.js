@@ -5,7 +5,6 @@
 // Expected Output:
 // "48 + 12 = 54 → Missing Digit: 8"________________________________________
 
-let input = "4? + 12 = 54";
 
 function findMissingDigit(equation) {
     for (let d = 0; d <= 9; d++) {

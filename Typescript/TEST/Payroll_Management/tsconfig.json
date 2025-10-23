@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    // File Layout
+    // Uncomment if your source is inside src folder
+    // "rootDir": "./src",
+    // "outDir": "./dist",
+
+    // Environment Settings
+    "module": "es2022",
+    "target": "es2022",
+    "moduleResolution": "node",      // <-- Add this explicitly
+    "esModuleInterop": true,
+    "allowJs": true,
+    "types": ["node"],
+
+    // Enable baseUrl for absolute imports (optional but recommended)
+    "baseUrl": ".",                  // <-- Set base folder for resolving non-relative imports
+    // "paths": {                    // Uncomment and adjust if you want aliases
+    //   "@pojo/*": ["POJO/*"],
+    //   "@services/*": ["Services/*"]
+    // },
+
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Recommended Options
+    "strict": true,
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true
+  }
+}
