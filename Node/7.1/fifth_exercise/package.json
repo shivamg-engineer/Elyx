@@ -1,0 +1,23 @@
+{
+  "name": "fifth_exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@types/express": "^5.0.5",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/swagger-jsdoc": "^6.0.4",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-json": "^2.0.0",
+    "swagger-ui-express": "^5.0.1"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "forth_exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.5",
+    "express": "^5.1.0"
+  },
+  "dependencies": {
+    "i18next": "^25.6.0",
+    "i18next-fs-backend": "^2.6.0",
+    "i18next-http-middleware": "^3.8.1"
+  }
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1761736835067" clover="3.2.0">
+  <project timestamp="1761736835067" name="All files">
+    <metrics statements="13" coveredstatements="11" conditionals="6" coveredconditionals="2" methods="4" coveredmethods="3" elements="23" coveredelements="16" complexity="0" loc="13" ncloc="13" packages="1" files="1" classes="1"/>
+    <file name="app.ts" path="/home/shivamgupta/Documents/Shivam/Node/5.1/fifth_exercise/src/app.ts">
+      <metrics statements="13" coveredstatements="11" conditionals="6" coveredconditionals="2" methods="4" coveredmethods="3"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="27" count="1" type="stmt"/>
+      <line num="28" count="1" type="stmt"/>
+      <line num="31" count="1" type="stmt"/>
+      <line num="34" count="1" type="cond" truecount="2" falsecount="2"/>
+      <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="36" count="0" type="stmt"/>
+    </file>
+  </project>
+</coverage>

@@ -1,0 +1,4 @@
+Exercise: File Type Validation
+TODO: 
+* Create a list of allowed MIME types and reject any upload not in the list. 
+* Display meaningful error messages to the client.

@@ -1,0 +1,8 @@
+5. Query String Validation
+
+* TODO: Build a middleware to validate query parameters for filtering (e.g., page, limit, sort).
+* Return a 400 status code if the parameters are not in the expected format.
+
+
+http://localhost:3000/users?page=2&limit=10&sort=asc
+

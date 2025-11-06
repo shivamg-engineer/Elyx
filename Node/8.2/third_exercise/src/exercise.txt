@@ -1,0 +1,5 @@
+Batch Data Validation 
+
+TODO: Validate an array of user objects in a single request. 
+Each user object must have id (number) and name (string). 
+Reject the entire request if any user object fails validation.

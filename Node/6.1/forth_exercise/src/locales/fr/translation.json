@@ -1,0 +1,4 @@
+{
+  "welcome_user": "Bienvenue, {{name}} !",
+  "product_message": "Le produit {{product}} est maintenant disponible."
+}

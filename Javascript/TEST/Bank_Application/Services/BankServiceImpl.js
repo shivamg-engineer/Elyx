@@ -15,13 +15,13 @@ class BankServiceImpl extends BankService {
             return;
         }
 
-        let account = new Account(name, deposit);
+        let account = new Account(name, deposit); //use const
 
         this.accounts.set(name, account);
         console.log(`Created ${type} account for ${name}.`);
     }
     deposit(name, amount) {
-        const account = this.accounts.get(name);
+        const account = this.accounts.get(name); //name validation(case sensitivity) e.g. user searched-> shivam and in db we have-> Shivam
         if (!account) return console.log("account not found");
 
         account.deposit(amount);
@@ -42,7 +42,7 @@ class BankServiceImpl extends BankService {
     }
 
     showTransactionHistory(name) {
-          const account = this.accounts.get(name);
+        const account = this.accounts.get(name);
         if (!account) return console.log("Account not found.");
         console.log(`Transactions for ${name}:`);
         account.getTransactionHistory().forEach(tx => console.log("- " + tx));

@@ -1,0 +1,5 @@
+Custom Validation Logic
+
+
+TODO: Create a custom Joi or Zod rule that ensures password must contain a special character.
+Throw a custom error message if this rule is not met.

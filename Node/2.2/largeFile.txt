@@ -1,0 +1,73 @@
+Secure email sending by integrating OAuth authentication.
+You said:
+import fs from "fs";
+
+
+async function writeFileContent(
+    filePath:string,
+    content:string
+):Promis
+we are appending file
+You said:
+give me a largeFile.txt with large size
+You said:
+just give me file
+You said:
+option aSecure email sending by integrating OAuth authentication.
+You said:
+import fs from "fs";
+
+
+async function writeFileContent(
+    filePath:string,
+    content:string
+):Promise<void>{
+
+    try{
+        await fs.appendFile(filePath, content);
+
+    }catch(error){
+      console.error("Error writing file:", error);
+    }
+}
+writeFileContent("output.txt", "Hello, TypeScript!\n");
+You said:
+is there other way to write code
+You said:
+we are appending file
+You said:
+give me a largeFile.txt with large size
+You said:
+just give me file
+You said:
+option aSecure email sending by integrating OAuth authentication.
+You said:
+import fs from "fs";
+
+
+async function writeFileContent(
+    filePath:string,
+    content:string
+):Promise<void>{
+
+    try{
+        await fs.appendFile(filePath, content);
+
+    }catch(error){
+      console.error("Error writing file:", error);
+    }
+}
+writeFileContent("output.txt", "Hello, TypeScript!\n");
+You said:
+is there other way to write code
+You said:
+we are appending file
+You said:
+give me a largeFile.txt with large size
+You said:
+just give me file
+You said:
+option aSecure email sending by integrating OAuth authentication.
+You said:
+import fs from "fs";
+
