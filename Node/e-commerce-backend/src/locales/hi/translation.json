@@ -1,0 +1,5 @@
+{
+  "welcome": "नमस्ते {{name}}, आपका स्वागत है!",
+  "product_not_found": "उत्पाद नहीं मिला",
+  "invalid_credentials": "गलत प्रमाण-पत्र"
+}

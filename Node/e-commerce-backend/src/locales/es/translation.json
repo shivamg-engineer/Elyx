@@ -1,0 +1,5 @@
+{
+  "welcome": "¡Hola {{name}}, bienvenido de nuevo!",
+  "product_not_found": "Producto no encontrado",
+  "invalid_credentials": "Credenciales inválidas"
+}
