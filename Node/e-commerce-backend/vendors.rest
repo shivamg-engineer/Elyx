@@ -1,0 +1,3 @@
+### Delete Vendor by ID
+DELETE http://localhost:3000/api/vendors/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJvbXZla2FuZGVAZ21haWwuY29tIiwicm9sZSI6InZlbmRvciIsImlhdCI6MTc2MzgwMDA3NCwiZXhwIjoxNzYzODAwOTc0fQ.LX8WPCb4K2sB6Rp0dTbTLqZ2FUFbxAE_zrthslnC064
