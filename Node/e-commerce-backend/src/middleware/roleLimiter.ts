@@ -24,12 +24,12 @@ const throttles = {
     user: slowDown({
         windowMs: 1 * 60 * 1000, // 1 min window
         delayAfter: 20, // after 20 requests
-        delayMs: 300// add 500ms delay to each request
+        delayMs: () => 300// add 500ms delay to each request
     }),
     vendor: slowDown({
         windowMs: 1 * 60 * 1000,
         delayAfter: 60,
-        delayMs: 150,
+        delayMs: () => 150,
     }),
 };
 

@@ -49,10 +49,15 @@ export class OrderService implements IOrderService {
 
   async findAll(userId: number, role: string) {
     if (role === "vendor") {
-      return this.orderRepo.find({
-        relations: ["product", "user"],
-      });
-    }
+    return this.orderRepo.find({
+      where: {
+        product: {
+          vendorId: userId,   // filter product by vendor
+        },
+      },
+      relations: ["product", "user"],
+    });
+  }
 
     // user -> only see their orders
     return this.orderRepo.find({

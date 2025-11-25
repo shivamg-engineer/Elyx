@@ -65,7 +65,7 @@ router.get("/:id", authGuard("user", "vendor"), async (req, res) => {
 });
 
 // Get all orders (vendor only)
-router.get("/", authGuard("vendor"), async (req: Request, res: Response) => {
+router.get("/", authGuard("user","vendor"), async (req: Request, res: Response) => {
   try {
     if (!req.user || !req.user.id) {
       return res.status(401).json({ message: "Unauthorized: user not found" });
@@ -74,6 +74,8 @@ router.get("/", authGuard("vendor"), async (req: Request, res: Response) => {
     const userId: number = req.user.id;
     const role: string = req.user.role;
     const id = Number(req.params.id);
+
+    
 
     const orders: Order[] = await orderService.findAll(userId, role);
 
@@ -87,7 +89,7 @@ router.get("/", authGuard("vendor"), async (req: Request, res: Response) => {
 router.put(
   "/:id",
   validateDto(UpdateOrderDto),
-  authGuard("user", "vendor"),
+  authGuard("user"),
   async (req: Request, res: Response) => {
     try {
       if (!req.user || !req.user.id) {
@@ -120,7 +122,7 @@ router.put(
 router.patch(
   "/:id",
   validateDto(PatchOrderDto),
-  authGuard("user", "vendor"),
+  authGuard("user"),
   async (req: Request, res: Response) => {
     try {
       if (!req.user || !req.user.id) {

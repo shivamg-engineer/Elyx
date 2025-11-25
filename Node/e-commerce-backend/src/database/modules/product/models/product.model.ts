@@ -7,6 +7,7 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
   DeleteDateColumn,
+  JoinColumn,
 } from "typeorm";
 import type { Wishlist } from "../../wishlist/models/wishlist.model.ts";
 import type { Cart } from "../../cart/models/cart.model.ts";
@@ -45,7 +46,11 @@ export class Product {
   @UpdateDateColumn({ name: "updated_at" })
   updatedAt!: Date;
 
+  @Column({ name: "vendor_id" })
+  vendorId!: number;
+
   @ManyToOne("Vendor", "products")
+  @JoinColumn({ name: "vendor_id" })
   vendor!: any;
 
   @OneToMany("Order", "product")
