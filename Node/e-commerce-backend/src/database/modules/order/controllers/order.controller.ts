@@ -8,6 +8,47 @@ import { PlaceOrderDto, UpdateOrderDto, PatchOrderDto } from "../dtos/order.dto.
 const router = Router();
 const orderService = new OrderService();
 
+// Centralized error handler
+const handleError = (err: any, res: Response) => {
+  console.error("ERROR:", err.message);
+
+  const dbErrorCodes = [
+    "ECONNREFUSED",
+    "ER_ACCESS_DENIED_ERROR",
+    "PROTOCOL_CONNECTION_LOST",
+    "ETIMEDOUT",
+  ];
+
+ 
+  if (dbErrorCodes.includes(err.code)) {
+    return res.status(503).json({
+      status: 503,
+      message: "Service temporarily unavailable. Database is down.",
+    });
+  }
+
+  
+  if (
+    err.name === "ValidationError" ||      // class-validator
+    err.name === "BadRequestError" ||      // your custom
+    err instanceof SyntaxError ||          // malformed JSON
+    err.status === 400 ||
+    err.code === "INVALID_INPUT"
+  ) {
+    return res.status(400).json({
+      status: 400,
+      message: err.message || "Bad Request",
+    });
+  }
+
+
+  return res.status(500).json({
+    status: 500,
+    message: "Internal server error",
+  });
+};
+
+
 // Place order
 router.post(
   "/place",
@@ -36,7 +77,7 @@ router.post(
         order,
       });
     } catch (err: any) {
-      res.status(400).json({ error: err.message });
+     return handleError(err, res);
     }
   }
 );
@@ -60,7 +101,8 @@ router.get("/:id", authGuard("user", "vendor"), async (req, res) => {
 
     return res.status(200).json(order);
   } catch (err: any) {
-    res.json({ Error: err.message });
+    return handleError(err, res);
+
   }
 });
 
@@ -81,7 +123,7 @@ router.get("/", authGuard("user","vendor"), async (req: Request, res: Response) 
 
     return res.status(200).json(orders);
   } catch (err: any) {
-    return res.status(500).json({ error: err.message });
+    return handleError(err, res);
   }
 });
 
@@ -114,7 +156,7 @@ router.put(
         updated,
       });
     } catch (err: any) {
-      res.status(400).json({ Error: err.message });
+      return handleError(err, res); 
     }
   }
 );
@@ -147,7 +189,7 @@ router.patch(
         patched,
       });
     } catch (err: any) {
-      res.status(400).json({ Error: err.message });
+      return handleError(err, res);
     }
   }
 );
@@ -169,7 +211,7 @@ router.delete("/:id", authGuard("user"), async (req, res) => {
 
     res.status(200).json({ message: "Order deleted", deleted });
   } catch (error) {
-    res.status(500).json({ message: "Error deleting order", error });
+    return handleError(error, res);
   }
 });
 

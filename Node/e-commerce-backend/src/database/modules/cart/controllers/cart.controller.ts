@@ -8,6 +8,37 @@ import { AddToCartDto, PatchCartDto, UpdateCartDto } from "../dtos/cart.dto.ts";
 const router = Router();
 const cartService = new CartService();
 
+const handleError = (err: any, res: Response) => {
+  console.log("Error:", err.message);
+  const dbErrorCodes = [
+    "ECONNREFUSED",
+    "ER_ACCESS_DENIED_ERROR",
+    "PROTOCOL_CONNECTION_LOST",
+    "ETIMEDOUT",
+  ];
+
+  if (dbErrorCodes.includes(err.code)) {
+    return res.status(503).json({
+      status: 503,
+      message: "Service temporarily unavailable. Database is down.",
+    });
+  }
+  if (
+    err.name === "ValidationError" || // class-validator
+    err.name === "BadRequestError" || // your custom
+    err instanceof SyntaxError || // malformed JSON
+    err.status === 400 ||
+    err.code === "INVALID_INPUT"
+  ) {
+    return res.status(400).json({
+      status: 400,
+      message: err.message || "Bad Request",
+    });
+  }
+
+  return res.status(500).json({ message: "Internal server error" });
+};
+
 router.post(
   "/",
   validateDto(AddToCartDto),
@@ -17,7 +48,7 @@ router.post(
       const cart: Cart = await cartService.addOrUpdate(req.body);
       res.status(201).json(cart);
     } catch (err: any) {
-      res.status(400).json({ error: err.message });
+      return handleError(err, res);
     }
   }
 );
@@ -26,13 +57,9 @@ router.get("/", authGuard("user"), async (req: Request, res: Response) => {
   try {
     const userId = req.user!.id;
     const carts = await cartService.findAll(userId);
-     res.status(200).json(carts);
-  } catch (err: unknown) {
-    if (err instanceof Error) {
-      return res.status(400).json({ error: err.message });
-    }
-
-    return res.status(400).json({ error: "Something went wrong" });
+    res.status(200).json(carts);
+  } catch (err: any) {
+    return handleError(err, res);
   }
 });
 
@@ -42,7 +69,7 @@ router.get("/:id", authGuard("user"), async (req: Request, res: Response) => {
     if (!cart) return res.status(404).json({ message: "Vendor not found" });
     res.status(200).json(cart);
   } catch (err: any) {
-     res.status(400).json({ error: err.message });
+    return handleError(err, res);
   }
 });
 
@@ -55,7 +82,7 @@ router.put(
       const cart = await cartService.update(Number(req.params.id), req.body);
       res.status(200).json(cart);
     } catch (err: any) {
-      res.status(400).json({ error: err.message });
+      return handleError(err, res);
     }
   }
 );
@@ -71,9 +98,9 @@ router.patch(
         req.user!.id,
         req.body
       );
-     res.status(200).json(updatedCart);
+      res.status(200).json(updatedCart);
     } catch (err: any) {
-      res.status(400).json({ error: err.message });
+      return handleError(err, res);
     }
   }
 );
@@ -82,7 +109,7 @@ router.delete(
   "/:id",
   authGuard("user"),
   async (req: Request, res: Response) => {
-   try {
+    try {
       const result = await cartService.softDelete(
         Number(req.params.id),
         req.user!.id
@@ -94,7 +121,7 @@ router.delete(
 
       res.status(200).json({ message: "Cart item deleted" });
     } catch (err: any) {
-      res.status(400).json({ error: err.message });
+      return handleError(err, res);
     }
   }
 );
@@ -286,7 +313,6 @@ export default router;
  *       404:
  *         description: Cart not found
  */
-
 
 /**
  * @swagger

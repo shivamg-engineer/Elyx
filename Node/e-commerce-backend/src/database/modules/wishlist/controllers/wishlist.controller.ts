@@ -8,6 +8,42 @@ import { CreateWishlistDto } from "../dtos/wishlist.dto.ts";
 const router = Router();
 const wishlistService = new WishlistService();
 
+// Centralized error handler
+const handleError = (err: any, res: Response) => {
+  console.error("ERROR:", err.message);
+
+  const dbErrorCodes = [
+    "ECONNREFUSED",
+    "ER_ACCESS_DENIED_ERROR",
+    "PROTOCOL_CONNECTION_LOST",
+    "ETIMEDOUT",
+  ];
+
+  if (dbErrorCodes.includes(err.code)) {
+    return res.status(503).json({
+      status: 503,
+      message: "Service temporarily unavailable. Database is down.",
+    });
+  }
+
+  if (
+    err.name === "ValidationError" || // class-validator
+    err.name === "BadRequestError" || // your custom
+    err instanceof SyntaxError || // malformed JSON
+    err.status === 400 ||
+    err.code === "INVALID_INPUT"
+  ) {
+    return res.status(400).json({
+      status: 400,
+      message: err.message || "Bad Request",
+    });
+  }
+
+  return res.status(500).json({
+    status: 500,
+    message: "Internal server error",
+  });
+};
 
 // Add to wishlist
 router.post(
@@ -25,7 +61,7 @@ router.post(
         message: "Item added to wishlist",
         data: item,});
     } catch (err: any) {
-      res.status(400).json({ Message: err.message });
+       return handleError(err, res);
     }
   }
 );
@@ -42,7 +78,7 @@ router.get("/", authGuard("user"), async (req: Request, res: Response) => {
         data: items,
       });
   } catch (err: any) {
-     return res.status(500).json({ message: err.message });
+     return handleError(err, res);
   }
 });
 
@@ -70,7 +106,7 @@ router.delete(
         message: "Item removed from wishlist",
       });
     } catch (err: any) {
-      res.status(500).json({ Message: err.message });
+      return handleError(err, res);
     }
   }
 );

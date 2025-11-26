@@ -45,16 +45,16 @@ app.get("/", (req, res) => {
 app.use(roleBasedLimiter());
 
 //
-app.use("/api/cart",cartRouter);
-app.use("/api/order",orderRouter);
-app.use("/api/product",productRouter);
-app.use("/api/user",userRouter);
-app.use("/api/vendors", vendorRouter);
-app.use("/api/wishlist",wishlistRouter);
+app.use("/api/v1/carts",cartRouter);
+app.use("/api/v1/orders",orderRouter);
+app.use("/api/v1/products",productRouter);
+app.use("/api/v1/users",userRouter);
+app.use("/api/v1/vendors", vendorRouter);
+app.use("/api/v1/wishlists",wishlistRouter);
 
 // register auth routes
-app.use("/api/auth/user", userAuthRoutes);
-app.use("/api/auth/vendor", vendorAuthRoutes);
+app.use("/api/v1/auth/users", userAuthRoutes);
+app.use("/api/v1/auth/vendors", vendorAuthRoutes);
 
 // Swagger setup
 setupSwagger(app);

@@ -11,40 +11,42 @@ function capitalizeOne(value: unknown) {
 
 export class UserRegisterDto {
   @IsString()
-  @IsNotEmpty()
+  @MinLength(2, { message: "Field must not be an empty string" })
+  @IsNotEmpty({ message: "Field cannot be empty" })
+  @Trim()
+  @EscapeHTML()
   @Transform(({ value }) =>
     capitalizeOne(value)
   )
-  @Trim()
-  @EscapeHTML()
   name!: string;
 
   @IsEmail()
-  @IsNotEmpty()
+  @IsNotEmpty({ message: "Field cannot be empty" })
   @ToLower()
   email!: string;
 
   @IsString()
-  @IsNotEmpty()
+  @IsNotEmpty({ message: "Field cannot be empty" })
   @Trim()
   phone!: string;
 
   @IsString()
-  @IsNotEmpty()
-  @MinLength(6)
+  @IsNotEmpty({ message: "Field cannot be empty" })
+  @MinLength(2, { message: "Field must not be an empty" })
   password!: string;
 
   @IsString()
-  @IsNotEmpty()
+  @IsNotEmpty({ message: "Field cannot be empty" })
   address!: string;
 }
 
 export class UserLoginDto {
   @IsEmail()
   @ToLower()
+  @IsNotEmpty({ message: "Field cannot be empty" })
   email!: string;
 
   @IsString()
-  @IsNotEmpty()
+  @IsNotEmpty({ message: "Field cannot be empty" })
   password!: string;
 }

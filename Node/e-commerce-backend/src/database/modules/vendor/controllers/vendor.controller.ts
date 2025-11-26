@@ -12,6 +12,43 @@ import {
 const router = Router();
 const vendorService = new VendorService();
 
+// Centralized error handler
+const handleError = (err: any, res: Response) => {
+  console.error("ERROR:", err.message);
+
+  const dbErrorCodes = [
+    "ECONNREFUSED",
+    "ER_ACCESS_DENIED_ERROR",
+    "PROTOCOL_CONNECTION_LOST",
+    "ETIMEDOUT",
+  ];
+
+  if (dbErrorCodes.includes(err.code)) {
+    return res.status(503).json({
+      status: 503,
+      message: "Service temporarily unavailable. Database is down.",
+    });
+  }
+
+  if (
+    err.name === "ValidationError" || // class-validator
+    err.name === "BadRequestError" || // your custom
+    err instanceof SyntaxError || // malformed JSON
+    err.status === 400 ||
+    err.code === "INVALID_INPUT"
+  ) {
+    return res.status(400).json({
+      status: 400,
+      message: err.message || "Bad Request",
+    });
+  }
+
+  return res.status(500).json({
+    status: 500,
+    message: "Internal server error",
+  });
+};
+
 //create vendor
 router.post(
   "/",
@@ -22,7 +59,7 @@ router.post(
       const vendor = await vendorService.create(req.body);
       res.status(201).json(vendor);
     } catch (err: any) {
-      res.status(400).json({ error: err.message });
+      return handleError(err, res);
     }
   }
 );
@@ -34,7 +71,7 @@ router.get("/", authGuard("vendor"), async (req: Request, res: Response) => {
     if (!vendors) return res.status(404).json({ message: "Vendor not found" });
     return res.status(200).json(vendors);
   } catch (err: any) {
-    return res.status(500).json({ Error: err.message });
+    return handleError(err, res);
   }
 });
 
@@ -52,7 +89,7 @@ router.get("/:id", authGuard("vendor"), async (req: Request, res: Response) => {
 
     return res.status(200).json(vendor);
   } catch (err: any) {
-    return res.status(500).json({ Error: err.message });
+    return handleError(err, res);
   }
 });
 
@@ -79,7 +116,7 @@ router.put(
       );
       return res.status(200).json(vendor);
     } catch (err: any) {
-      return res.status(400).json({ Error: err.message });
+      return handleError(err, res);
     }
   }
 );
@@ -108,7 +145,7 @@ router.patch(
       );
       return res.status(200).json(vendor);
     } catch (err: any) {
-      return res.json({ Error: err.message });
+      return handleError(err, res);
     }
   }
 );
@@ -129,7 +166,7 @@ router.delete(
 
       return res.status(200).json({ message: "Vendor deleted" });
     } catch (err: any) {
-      res.status(500).json({ message: "Error deleting order", err });
+      return handleError(err, res);
     }
   }
 );

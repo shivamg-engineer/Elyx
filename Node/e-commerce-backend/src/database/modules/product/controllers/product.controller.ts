@@ -7,6 +7,47 @@ import { CreateProductDto, UpdateProductDto } from "../dtos/product.dto.ts";
 const router = Router();
 const productService = new ProductService();
 
+// Centralized error handler
+const handleError = (err: any, res: Response) => {
+  console.error("ERROR:", err.message);
+
+  const dbErrorCodes = [
+    "ECONNREFUSED",
+    "ER_ACCESS_DENIED_ERROR",
+    "PROTOCOL_CONNECTION_LOST",
+    "ETIMEDOUT",
+  ];
+
+
+  if (dbErrorCodes.includes(err.code)) {
+    return res.status(503).json({
+      status: 503,
+      message: "Service temporarily unavailable. Database is down.",
+    });
+  }
+
+  
+  if (
+    err.name === "ValidationError" ||      // class-validator
+    err.name === "BadRequestError" ||      // your custom
+    err instanceof SyntaxError ||          // malformed JSON
+    err.status === 400 ||
+    err.code === "INVALID_INPUT"
+  ) {
+    return res.status(400).json({
+      status: 400,
+      message: err.message || "Bad Request",
+    });
+  }
+
+
+  return res.status(500).json({
+    status: 500,
+    message: "Internal server error",
+  });
+};
+
+
 //create
 router.post(
   "/",
@@ -16,8 +57,9 @@ router.post(
     try {
       const product = await productService.create(req.body);
       res.status(201).json(product);
-    } catch (err: any) {
-      res.status(400).json({ error: err.message });
+    }  catch (err: any) {
+      // res.status(400).json({ error: err.message });
+      return handleError(err, res);
     }
   }
 );
@@ -58,8 +100,9 @@ router.get(
       const result = await productService.getPublicProducts(query);
 
       res.status(200).json({ success: true, ...result });
-    } catch (err: any) {
-      res.status(400).json({ error: err.message });
+    }  catch (err: any) {
+      // res.status(400).json({ error: err.message });
+      return handleError(err, res);
     }
   }
 );
@@ -71,10 +114,11 @@ router.get(
   async (req: Request, res: Response) => {
     try {
       const product = await productService.findOne(Number(req.params.id));
-      if (!product) throw new Error("product not found");
+      if (!product) return res.status(404).json({ message:  "Product not found" });
       res.status(200).json(product);
     } catch (err: any) {
-      res.status(400).json({ error: err.message });
+      // res.status(400).json({ error: err.message });
+      return handleError(err, res);
     }
   }
 );
@@ -88,9 +132,10 @@ router.put(
       const id = Number(req.params.id);
       await productService.update(id, req.body);
       const product = productService.findOne(id);
-      res.status(404).json(product);
-    } catch (err: any) {
-      res.status(400).json({ error: err.message });
+      return res.status(404).json(product);
+    }  catch (err: any) {
+      // res.status(400).json({ error: err.message });
+      return handleError(err, res);
     }
   }
 );
@@ -105,8 +150,9 @@ router.patch(
       await productService.patch(id, req.body);
       const product = productService.findOne(id);
       res.status(200).json(product);
-    } catch (err: any) {
-      res.status(400).json({ error: err.message });
+    }  catch (err: any) {
+      // res.status(400).json({ error: err.message });
+     return handleError(err, res);
     }
   }
 );
@@ -123,7 +169,8 @@ router.delete(
 
       return res.status(200).json({ Message: `product with id ${id}`, deleted });
     } catch (err: any) {
-      res.status(400).json({ error: err.message });
+      // res.status(400).json({ error: err.message });
+      return handleError(err, res);
     }
   }
 );
