@@ -6,12 +6,12 @@ function capitalizeOne(value: unknown) {
   if (typeof value !== "string") return value;
   const trimmed = value.trim();
   if (!trimmed) return trimmed;
-  return trimmed.charAt(0).toUpperCase() + trimmed.slice(1).toLowerCase();
+  return trimmed.split(" ").map((word:string) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(" ");
 }
 
 export class UserRegisterDto {
   @IsString()
-  @MinLength(2, { message: "Field must not be an empty string" })
+  @MinLength(2, { message: "Field must not be an invalid" })
   @IsNotEmpty({ message: "Field cannot be empty" })
   @Trim()
   @EscapeHTML()
@@ -32,7 +32,7 @@ export class UserRegisterDto {
 
   @IsString()
   @IsNotEmpty({ message: "Field cannot be empty" })
-  @MinLength(2, { message: "Field must not be an empty" })
+  @MinLength(6, { message: "Password length must not be less than 6" })
   password!: string;
 
   @IsString()
