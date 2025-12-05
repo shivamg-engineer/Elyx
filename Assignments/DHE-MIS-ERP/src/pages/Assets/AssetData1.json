@@ -1,0 +1,122 @@
+[
+  {
+    "code": "COMP0001",
+    "name": "Desktop Computer 1",
+    "category": "Desktop",
+    "type": "Computer",
+    "purchaseDate": "15 Jan 2018",
+    "currentValue": "₹3,499.20",
+    "cost": "₹45,000.00",
+    "status": "Under Maintenance",
+    "condition": "Excellent",
+    "location": "Computer Lab 1"
+  },
+  {
+    "code": "COMP0002",
+    "name": "Desktop Computer 2",
+    "category": "Desktop",
+    "type": "Computer",
+    "purchaseDate": "15 Feb 2019",
+    "currentValue": "₹3,888.00",
+    "cost": "₹50,000.00",
+    "status": "In Use",
+    "condition": "Good",
+    "location": "Computer Lab 2"
+  },
+  {
+    "code": "COMP0003",
+    "name": "Desktop Computer 3",
+    "category": "Desktop",
+    "type": "Computer",
+    "purchaseDate": "15 Mar 2020",
+    "currentValue": "₹4,276.80",
+    "cost": "₹55,000.00",
+    "status": "In Use",
+    "condition": "Fair",
+    "location": "Computer Lab 1"
+  },
+  {
+    "code": "COMP0004",
+    "name": "Desktop Computer 4",
+    "category": "Desktop",
+    "type": "Computer",
+    "purchaseDate": "15 Apr 2021",
+    "currentValue": "₹7,776.00",
+    "cost": "₹60,000.00",
+    "status": "In Use",
+    "condition": "Excellent",
+    "location": "Computer Lab 2"
+  },
+  {
+    "code": "COMP0005",
+    "name": "Desktop Computer 5",
+    "category": "Desktop",
+    "type": "Computer",
+    "purchaseDate": "15 May 2022",
+    "currentValue": "₹14,040.00",
+    "cost": "₹65,000.00",
+    "status": "In Use",
+    "condition": "Good",
+    "location": "Computer Lab 1"
+  },
+  {
+    "code": "COMP0006",
+    "name": "Desktop Computer 6",
+    "category": "Desktop",
+    "type": "Computer",
+    "purchaseDate": "15 Jun 2023",
+    "currentValue": "₹25,200.00",
+    "cost": "₹70,000.00",
+    "status": "In Use",
+    "condition": "Fair",
+    "location": "Computer Lab 2"
+  },
+  {
+    "code": "COMP0007",
+    "name": "Desktop Computer 7",
+    "category": "Desktop",
+    "type": "Computer",
+    "purchaseDate": "15 Jul 2018",
+    "currentValue": "₹5,832.00",
+    "cost": "₹75,000.00",
+    "status": "In Use",
+    "condition": "Excellent",
+    "location": "Computer Lab 1"
+  },
+  {
+    "code": "COMP0008",
+    "name": "Desktop Computer 8",
+    "category": "Desktop",
+    "type": "Computer",
+    "purchaseDate": "15 Aug 2019",
+    "currentValue": "₹6,220.80",
+    "cost": "₹80,000.00",
+    "status": "In Use",
+    "condition": "Good",
+    "location": "Computer Lab 2"
+  },
+  {
+    "code": "COMP0009",
+    "name": "Desktop Computer 9",
+    "category": "Desktop",
+    "type": "Computer",
+    "purchaseDate": "15 Sept 2020",
+    "currentValue": "₹6,609.60",
+    "cost": "₹85,000.00",
+    "status": "Under Maintenance",
+    "condition": "Fair",
+    "location": "Computer Lab 1"
+  },
+  {
+    "code": "COMP0010",
+    "name": "Desktop Computer 10",
+    "category": "Desktop",
+    "type": "Computer",
+    "purchaseDate": "15 Oct 2021",
+    "currentValue": "₹11,664.00",
+    "cost": "₹90,000.00",
+    "status": "In Use",
+    "condition": "Excellent",
+    "location": "Computer Lab 2"
+  }
+]

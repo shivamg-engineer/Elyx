@@ -1,0 +1,230 @@
+/* ---------------- PAGE LAYOUT ---------------- */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 25px 80px;
+  font-family: "Inter", sans-serif;
+}
+
+/* ---------------- HEADER ---------------- */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.code {
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.statusBadge {
+  background: #0f766e;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ---------------- STAT CARDS ---------------- */
+.startRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.statCard {
+  display: flex;
+  align-items: center;
+  background: white;
+  gap: 12px;
+  padding: 5px 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+.icon {
+  font-size: 30px;
+}
+.statNum {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: -4px;
+}
+
+.statLabel {
+  color: #64748b;
+}
+
+/* ---------------- TABS ---------------- */
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  background: #f1f5f9;
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.tab {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #475569;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.activeTab {
+  background: #ffffff;
+  font-weight: 600;
+  color: #0f172a;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------------- MAIN CARD ---------------- */
+.card {
+  background: #ffffff;
+  padding: 25px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.cardTitle {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.cardSubtitle {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+/* ---------------- INFO GRID ---------------- */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px 60px;
+  margin-top: 15px;
+}
+
+.infoGridFull {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px 60px;
+}
+
+label {
+  font-size: 14px;
+  color: #65748b;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-top: 4px;
+}
+
+/* ---------------- STATUS CHIP ---------------- */
+.adminGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* ---------------- INFRA SECTION ---------------- */
+
+.subHeading {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.rowBoxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.box {
+  background: #f1f5f9;
+  padding: 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+}
+
+/* ---------------- DOCUMENT LIST ---------------- */
+
+.docRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Program list */
+
+.program_card {
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 15px;
+  justify-content: space-between;
+}
+.left{
+  display: flex;
+  flex-direction:row;
+}
+.right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* margin: 20px; */
+}
+.approved_badge, .verified_badge {
+  background: #0f766e;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.doc_card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 15px;
+}
+
+.doc_date{
+color: #475569;
+}

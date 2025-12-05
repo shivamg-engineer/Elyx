@@ -1,0 +1,100 @@
+/* PAGE WRAPPER */
+.asset_page {
+  padding: 20px 30px;
+}
+
+/* MAIN TITLE */
+.asset_title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+}
+
+.asset_subtitle {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* -------------------- TABS -------------------- */
+.asset_tabs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  width: fit-content;
+  margin-bottom: 25px;
+}
+
+.asset_tab {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.2s ease;
+}
+
+.asset_tab:hover {
+  background: #f0f1f3;
+}
+
+.asset_tabActive {
+  background: #0b5c6a;
+  color: #fff !important;
+  font-weight: 600;
+}
+
+/* Tab Icon */
+.asset_tabIcon {
+  font-size: 14px;
+}
+
+/* CONTENT WRAPPER */
+.asset_content {
+  margin-top: 10px;
+}
+
+.asset_placeholder {
+  padding: 30px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  text-align: center;
+  color: #666;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+
+@media (max-width: 992px) {
+  .asset_tabs {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .asset_page {
+    padding: 15px;
+  }
+
+  .asset_tabs {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .asset_tab {
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+  }
+}
+

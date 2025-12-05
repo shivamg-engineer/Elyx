@@ -1,0 +1,570 @@
+.page {
+  padding: 25px 30px;
+  font-family: "Inter", sans-serif;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* ---------------- Tabs ---------------- */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 8px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.activeTab {
+  background: #005f63;
+  color: white;
+  border-color: #005f63;
+}
+
+/* ---------------- Card ---------------- */
+.card {
+  background: white;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.desc {
+  color: #777;
+  margin-bottom: 18px;
+}
+
+/* ---------------- Filters ---------------- */
+.filters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.filterBox label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.filterBox select,
+.filterBox input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #f8f8f8;
+}
+
+/* ---------------- Table ---------------- */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.table th {
+  text-align: left;
+  padding: 14px 0;
+  color: #666;
+}
+
+.table td {
+  padding: 14px 0;
+  border-top: 1px solid #eee;
+}
+
+/* ---------------- Status Badges ---------------- */
+.badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.approved {
+  background: #e7f6ed;
+  color: #1b7c38;
+}
+
+.completed {
+  background: #d7f3ff;
+  color: #0074a9;
+}
+
+.pending {
+  background: #fff5cc;
+  color: #a37500;
+}
+
+/* ---------------- Actions ---------------- */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.iconBtn {
+  width: 36px;
+  height: 36px;
+  background: #f7f7f7;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.payBtn {
+  background: #006e6c;
+  color: white;
+  padding: 7px 15px;
+  border-radius: 8px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* apply for exam  */
+.page {
+  padding: 25px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.inputBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputBox select {
+  margin-top: 6px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+}
+
+.subjectCard {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 8px;
+  background: #f8f9fa;
+}
+
+.subjectRow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.subjectText {
+  font-size: 15px;
+}
+
+.feeBox {
+  margin-top: 25px;
+  padding: 15px;
+  background: #f1f3f5;
+  border-radius: 6px;
+}
+
+.feeRow,
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+.totalRow {
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.btnRow {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.payBtn {
+  flex: 1;
+  background: #0f5c5c;
+  color: white;
+  padding: 14px;
+  border-radius: 6px;
+  border: none;
+  margin-right: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.draftBtn {
+  padding: 14px 25px;
+  border-radius: 6px;
+  border: 1px solid #adb5bd;
+  background: white;
+  cursor: pointer;
+}
+
+/* Admit cards */
+/* -------------------- PAGE WRAPPER -------------------- */
+.admit_page {
+  padding: 20px 30px;
+}
+
+.admit_title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.admit_subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 18px;
+}
+
+/* -------------------- MAIN CARD -------------------- */
+.admit_card {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* -------------------- LEFT PHOTO -------------------- */
+.admit_left {
+  text-align: center;
+}
+
+.admit_photo {
+  width: 110px;
+  height: 130px;
+  background: #eef1f5;
+  border-radius: 6px;
+}
+
+.admit_photoLabel {
+  font-size: 13px;
+  margin-top: 6px;
+  color: #666;
+}
+
+/* -------------------- CENTER INFORMATION -------------------- */
+.admit_center {
+  flex: 1;
+  max-width: 70%;
+}
+
+.admit_name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.admit_roll {
+  font-size: 13px;
+  color: #777;
+}
+
+.admit_course {
+  font-size: 14px;
+  margin: 4px 0 15px;
+}
+
+.admit_row {
+  margin: 6px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.admit_icon {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.admit_label {
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.admit_value {
+  color: #444;
+}
+
+/* -------------------- SUBJECT LIST -------------------- */
+.admit_subjectHeading {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 18px 0 10px;
+}
+
+.admit_subjectGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.admit_subjectBox,
+.admit_subjectBoxFull {
+  border: 1px solid #e5e7eb;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.admit_subjectBoxFull {
+  grid-column: span 2;
+}
+
+/* -------------------- BUTTONS -------------------- */
+.admit_btnRow {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.admit_downloadBtn {
+  background: #0b5c6a;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.admit_printBtn {
+  background: #f3f4f6;
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+/* -------------------- RIGHT BADGE -------------------- */
+.admit_right {
+  display: flex;
+  align-items: flex-start;
+}
+
+.admit_badge {
+  background: #0b5c6a;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+}
+/* --------------------- RESULTS PAGE --------------------- */
+.result_page {
+  padding: 20px 30px;
+}
+
+.result_title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.result_subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 18px;
+}
+
+.result_card {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  padding: 25px;
+}
+
+/* --------------------- HEADER --------------------- */
+.result_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.result_name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.result_roll {
+  font-size: 13px;
+  color: #666;
+}
+
+.result_course {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.result_passBadgeMain {
+  background: #0b5c6a;
+  color: white;
+  padding: 8px 25px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* --------------------- SUMMARY GRID --------------------- */
+.result_summaryGrid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.result_summaryBox {
+  background: #f7fafc;
+  padding: 18px;
+  text-align: center;
+  border-right: 1px solid #e5e7eb;
+}
+
+.result_summaryBox:last-child {
+  border-right: none;
+}
+
+.result_summaryBox h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.result_summaryBox p {
+  margin-top: 4px;
+  color: #666;
+  font-size: 13px;
+}
+
+/* --------------------- SECTION TITLE --------------------- */
+.result_sectionTitle {
+  margin: 25px 0 10px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* --------------------- TABLE --------------------- */
+.result_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.result_table th {
+  text-align: left;
+  padding: 12px 0;
+  font-size: 14px;
+  color: #666;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.result_table td {
+  padding: 14px 0;
+  border-bottom: 1px solid #f1f1f1;
+  font-size: 14px;
+}
+
+/* GRADE CHIP */
+.result_gradeBadge {
+  background: #eef2ff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #3f4ddb;
+}
+
+/* PASS BADGE */
+.result_passBadge {
+  background: #e7fff1;
+  color: #168c43;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* --------------------- MARK SHEET BOX --------------------- */
+.result_sheetBox {
+  margin-top: 25px;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f9fafb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result_sheetTitle {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.result_downloadBtn {
+  background: #0b5c6a;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}

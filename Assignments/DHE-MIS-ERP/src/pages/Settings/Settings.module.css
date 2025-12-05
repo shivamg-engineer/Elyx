@@ -1,0 +1,116 @@
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.heading {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.subheading {
+  color: #666;
+  margin-bottom: 20px;
+}
+/* Container holding all tabs */
+.tabRow {
+  display: flex;
+  background: #f6f8fa;
+  padding: 6px;
+  border-radius: 12px;
+  gap: 8px;
+}
+
+.tabButton {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: #5d6c75;
+  font-size: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+
+
+.activeTab {
+  background: #ffffff;
+  color: #1c1c1c;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.tabButton:hover:not(.activeTab) {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.contentCard {
+  background: white;
+  border: 1px solid #e2e2e2;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sectionTitle {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.sectionSubtitle {
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.label {
+  font-weight: 500;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.toggleGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.divider {
+  margin: 15px 0;
+  border: none;
+  border-bottom: 1px solid #eee;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.resetButton {
+  padding: 10px 16px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.saveButton {
+  padding: 10px 16px;
+  background: #6ca7a0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}

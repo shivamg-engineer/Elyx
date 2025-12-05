@@ -1,0 +1,263 @@
+.container {
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Header */
+.title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #666;
+}
+
+/* Action Buttons */
+.actionRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.exportBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #ddd;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+}
+
+.addBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #0a7b71;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+
+.plus {
+  font-size: 20px;
+}
+
+/* Statistic Cards */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.05);
+}
+
+.cardLabel {
+  font-size: 15px;
+  font-weight: 600;
+  color: #555;
+}
+
+.cardIcon {
+  margin-top: 4px;
+  color: #666;
+}
+
+.cardValue {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.cardSubtext {
+  font-size: 13px;
+  color: #777;
+}
+
+/* Filters */
+.filterBox {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.05);
+}
+
+.filterHeader {
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.filterIcon {
+  color: #666;
+}
+
+.filterGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.filterItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filterLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+}
+
+.select,
+.input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.container {
+  padding: 24px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.tableWrapper {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.06);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.table thead tr {
+  background: #f7f7f7;
+}
+
+.table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #555;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.scholarshipName {
+  font-weight: 600;
+}
+
+/* Badges */
+.badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  border: 1px solid;
+}
+
+.govBadge {
+  color: #0b63ce;
+  border-color: #0b63ce;
+  background: #e7f1ff;
+}
+
+.instBadge {
+  color: #a450f2;
+  border-color: #a450f2;
+  background: #f4e8ff;
+}
+
+/* Year Badge */
+.yearBadge {
+  background: #d8c057;
+  padding: 4px 10px;
+  border-radius: 12px;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Amount Styling */
+.amount {
+  color: #0a8a2a;
+  font-weight: 600;
+}
+
+.perStudent {
+  color: #777;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.pageBtn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.pageBtnActive {
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: #0a7b71;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.pageInfo {
+  font-size: 14px;
+  color: #555;
+}
+
+.active_sub_tab{
+  background-color: #fff;
+}
+.subTab{
+  background-color: #ccc;
+}
