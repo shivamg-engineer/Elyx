@@ -1,0 +1,210 @@
+/* ============================ */
+/* MAIN CARD */
+/* ============================ */
+.card {
+  background: #ffffff;
+  padding: 28px 32px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  margin-top: 20px;
+}
+
+/* ============================ */
+/* TITLES */
+/* ============================ */
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 22px;
+}
+
+/* Section titles inside tabs */
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 28px 0 12px;
+  color: #111827;
+}
+
+.description {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+/* ============================ */
+/* SUB-TABS */
+/* ============================ */
+.tabsWrapper {
+  display: flex;
+  gap: 0;
+  background: #f3f4f6;
+  padding: 4px;
+  border-radius: 10px;
+  width: fit-content;
+  margin-bottom: 28px;
+}
+
+.tab {
+  padding: 10px 28px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #6b7280;
+  font-weight: 500;
+}
+.activeTab{
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #e5e7eb;
+  font-weight: 600;
+}
+
+.activeSubTab {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #e5e7eb;
+  font-weight: 600;
+}
+
+/* ============================ */
+/* 3-COLUMN GRID */
+/* ============================ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px 28px;
+  margin-bottom: 10px;
+}
+
+/* ============================ */
+/* INPUT GROUPS */
+/* ============================ */
+.group,
+.groupFull {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.groupFull {
+  grid-column: span 3;
+}
+
+.group label,
+.groupFull label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.group input,
+.group select,
+.groupFull input,
+.groupFull select,
+.groupFull textarea {
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  padding: 10px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  outline: none;
+}
+
+.group input:focus,
+.group select:focus,
+.groupFull input:focus,
+.groupFull textarea:focus {
+  border-color: #0d9488;
+  background: #ffffff;
+}
+
+/* ============================ */
+/* CHECKBOX */
+/* ============================ */
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.checkboxRow input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #0d9488;
+}
+
+.checkboxRow label {
+  font-size: 14px;
+  color: #374151;
+}
+
+/* ============================ */
+/* BUTTONS */
+/* ============================ */
+.bottomRight {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 28px;
+}
+
+.nextBtn {
+  background: #0d9488;
+  padding: 10px 26px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.nextBtn:hover {
+  background: #0b7f75;
+}
+
+/* Prev/Next button row */
+.btnRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+}
+
+.prevBtn {
+  padding: 10px 24px;
+  border-radius: 8px;
+  border: 1px solid #94a3b8;
+  background: white;
+  color: #374151;
+  cursor: pointer;
+}
+
+.prevBtn:hover {
+  background: #f1f5f9;
+}
+
+.submitBtn {
+  background: #0369a1;
+  padding: 10px 26px;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  background: #075985;
+}
+
+.error{
+  color: red;
+}

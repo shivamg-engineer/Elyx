@@ -1,0 +1,305 @@
+.page {
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+/* ---------- TITLES ---------- */
+.mainTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.mainSubtitle {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.sectionTitle {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 10px;
+  color: #0f172a;
+}
+
+.sectionSubtitle {
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+/* ---------- SUMMARY CARDS ---------- */
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.summaryCard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #0f172a;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.cardValue {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.cardLabel {
+  color: #64748b;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+/* ---------- FILTER SECTION ---------- */
+.filterCard {
+  background: white;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  padding: 25px;
+}
+
+.filterTitle {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.filterSubtitle {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+/* 5-column filter grid */
+.filterGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.filterBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.filterBox label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #475569;
+}
+
+.filterBox select {
+  height: 42px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+}
+
+/* Search bar */
+.searchWrapper {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.searchWrapper input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+}
+
+/* Button */
+.clearBtn {
+  background: #f1f5f9;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #0f172a;
+}
+.wrapper {
+  background: #fff;
+  padding: 25px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.tableCard {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  text-align: left;
+  background: #f8fafc;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #374151;
+}
+
+tbody td {
+  padding: 14px;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: top;
+}
+
+.caseNum {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.caseDate {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.caseTitle {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.caseSubtitle {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.court {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.courtLoc {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* TAGS */
+.tag {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.typeTag {
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+/* Status Tags */
+.underhearing {
+  background: #0f766e;
+  color: white;
+}
+
+.pending {
+  background: #d97706;
+  color: white;
+}
+
+.closed {
+  background: #475569;
+  color: white;
+}
+
+.adjourned {
+  background: #334155;
+  color: white;
+}
+
+.disposed {
+  background: #64748b;
+  color: white;
+}
+
+/* Priority Tags */
+.high {
+  background: #0f766e;
+  color: white;
+}
+
+.medium {
+  background: #d97706;
+  color: white;
+}
+
+.low {
+  background: #475569;
+  color: white;
+}
+
+/* Hearing cell */
+.hearingCell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.iconBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #374151;
+}
+
+.footer {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pageBtn {
+  background: #f1f5f9;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.pageIndicator {
+  font-size: 14px;
+  color: #374151;
+}

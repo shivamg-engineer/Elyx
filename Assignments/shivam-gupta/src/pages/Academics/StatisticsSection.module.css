@@ -1,0 +1,94 @@
+.stats_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.chart_card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.flex_row {
+  display: flex;
+  gap: 20px;
+}
+
+.chart_card_half {
+  flex: 1;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+/* category breakdown */
+.breakdown_list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.breakdown_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Left side */
+.left_part {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.category_name {
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Right side */
+.right_part {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.count {
+  font-weight: 700;
+  color: #000;
+}
+
+.percent {
+  color: #777;
+  font-size: 14px;
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 24px;
+  width: 100%;
+  align-items: start;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  /* width: 100%; */
+  max-width: 100%;
+  overflow: hidden; /* Prevents charts from breaking grid */
+  box-sizing: border-box;
+}

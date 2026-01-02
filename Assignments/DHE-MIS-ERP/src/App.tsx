@@ -18,6 +18,10 @@ import { Settings } from "./pages/Settings/Settings";
 import { Reports } from "./pages/Reports/Reports";
 import  {Grievance} from "./pages/Grievance/Grievance";
 import { InstituteProfile } from "./pages/Institute_Registration/InstituteProfile";
+<<<<<<< HEAD
+=======
+import ProtectedRoute from "./routes/ProtectedRoute";
+>>>>>>> ac8ca4da (Initial commit)
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -28,6 +32,7 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
 
+<<<<<<< HEAD
         {/* Dashboard Routes */}
         <Route path="/dashboard" element={<Dashboard />} />
          {/* Parent */}
@@ -53,6 +58,137 @@ function App() {
         <Route path="/students" element={<Students />} />
         <Route path="/rti" element={<RTI />} />
         <Route path="/reports" element={<Reports />} />
+=======
+        {/* Dashboard Routes (protected) */}
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* Parent */}
+        <Route path="institute-registration">
+          {/* Children (protected) */}
+          <Route
+            path="register"
+            element={
+              <ProtectedRoute>
+                <InstituteRegister />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="profile"
+            element={
+              <ProtectedRoute>
+                <InstituteProfile />
+              </ProtectedRoute>
+            }
+          />
+        </Route>
+
+        <Route path="/verification">
+          <Route
+            path="Application"
+            element={
+              <ProtectedRoute>
+                <Verification />
+              </ProtectedRoute>
+            }
+          ></Route>
+        </Route>
+        <Route
+          path="/grievance"
+          element={
+            <ProtectedRoute>
+              <Grievance />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/staffing"
+          element={
+            <ProtectedRoute>
+              <Staffing />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/settings"
+          element={
+            <ProtectedRoute>
+              <Settings />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/academics"
+          element={
+            <ProtectedRoute>
+              <Academics />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/workload"
+          element={
+            <ProtectedRoute>
+              <Workload />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/noc"
+          element={
+            <ProtectedRoute>
+              <NOC />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/assets"
+          element={
+            <ProtectedRoute>
+              <Assets />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/legal-cases"
+          element={
+            <ProtectedRoute>
+              <LegalCases />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/students"
+          element={
+            <ProtectedRoute>
+              <Students />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/rti"
+          element={
+            <ProtectedRoute>
+              <RTI />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/reports"
+          element={
+            <ProtectedRoute>
+              <Reports />
+            </ProtectedRoute>
+          }
+        />
+>>>>>>> ac8ca4da (Initial commit)
       </Routes>
     </>
   );

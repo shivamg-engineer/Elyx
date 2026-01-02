@@ -1,0 +1,134 @@
+[
+  {
+    "id": "GRV/2024/001",
+    "complainant": "Rajesh Kumar",
+    "complainantId": "EMP01000",
+    "category": "Major",
+    "nature": "Advance",
+    "subject": "Delay in salary payment for last three months",
+    "date": "2024-01-15",
+    "status": "Resolved",
+    "department": "Accounts Department"
+  },
+  {
+    "id": "GRV/2024/002",
+    "complainant": "Priya Sharma",
+    "complainantId": "EMP01001",
+    "category": "Medium",
+    "nature": "Benefits",
+    "subject": "Leave application rejected without proper justification",
+    "date": "2024-01-20",
+    "status": "Under Investigation",
+    "department": "HR Department"
+  },
+  {
+    "id": "GRV/2024/003",
+    "complainant": "Amit Patel",
+    "complainantId": "EMP01002",
+    "category": "Minor",
+    "nature": "Leave",
+    "subject": "Advance payment request pending for six months",
+    "date": "2024-01-25",
+    "status": "Pending",
+    "department": "Administration"
+  },
+  {
+    "id": "GRV/2024/004",
+    "complainant": "Sunita Deshmukh",
+    "complainantId": "EMP01003",
+    "category": "Major",
+    "nature": "Salary",
+    "subject": "Benefits not provided as per service rules",
+    "date": "2024-01-10",
+    "status": "Resolved",
+    "department": "Welfare Department"
+  },
+  {
+    "id": "GRV/2024/005",
+    "complainant": "Vikram Singh",
+    "complainantId": "EMP01004",
+    "category": "Medium",
+    "nature": "Promotion",
+    "subject": "Promotion denied despite meeting all criteria",
+    "date": "2024-02-01",
+    "status": "Under Investigation",
+    "department": "Establishment Section"
+  },
+  {
+    "id": "GRV/2024/006",
+    "complainant": "Neha Gupta",
+    "complainantId": "EMP01005",
+    "category": "Minor",
+    "nature": "Transfer",
+    "subject": "Transfer request not processed",
+    "date": "2024-02-05",
+    "status": "Pending",
+    "department": "Transport"
+  },
+  {
+    "id": "GRV/2024/007",
+    "complainant": "Rahul Verma",
+    "complainantId": "EMP01006",
+    "category": "Major",
+    "nature": "Working Conditions",
+    "subject": "Poor working conditions in department",
+    "date": "2024-01-18",
+    "status": "Resolved",
+    "department": "Administration"
+  },
+  {
+    "id": "GRV/2024/008",
+    "complainant": "Pooja Nair",
+    "complainantId": "EMP01007",
+    "category": "Medium",
+    "nature": "Harassment",
+    "subject": "Harassment by senior colleague",
+    "date": "2024-02-08",
+    "status": "Under Investigation",
+    "department": "Internal Complaints Committee"
+  },
+  {
+    "id": "GRV/2024/009",
+    "complainant": "Suresh Patil",
+    "complainantId": "EMP01008",
+    "category": "Minor",
+    "nature": "Other",
+    "subject": "Increment not granted as per rules",
+    "date": "2024-02-10",
+    "status": "Pending",
+    "department": "Accounts Department"
+  },
+  {
+    "id": "GRV/2024/010",
+    "complainant": "Meena Joshi",
+    "complainantId": "EMP01009",
+    "category": "Major",
+    "nature": "Advance",
+    "subject": "Medical reimbursement claim rejected",
+    "date": "2024-01-12",
+    "status": "Resolved",
+    "department": "Health Services"
+  },
+  {
+    "id": "GRV/2024/011",
+    "complainant": "Karan Shah",
+    "complainantId": "EMP01010",
+    "category": "Medium",
+    "nature": "Benefits",
+    "subject": "PF contribution missing",
+    "date": "2024-02-14",
+    "status": "Pending",
+    "department": "Accounts Department"
+  },
+  {
+    "id": "GRV/2024/012",
+    "complainant": "Anita Rao",
+    "complainantId": "EMP01011",
+    "category": "Minor",
+    "nature": "Leave",
+    "subject": "Compensatory off not credited",
+    "date": "2024-02-16",
+    "status": "Under Investigation",
+    "department": "HR Department"
+  }
+]

@@ -3,6 +3,10 @@ import { UserAuthService } from "../services/user-auth.service.ts";
 import { roleBasedLimiter } from "../../middleware/roleLimiter.ts";
 import { validateDto } from "../../middleware/validate.middleware.ts";
 import { UserLoginDto, UserRegisterDto } from "../dtos/user-auth.dto.ts";
+<<<<<<< HEAD
+=======
+import logger from "../../config/logger.ts";
+>>>>>>> ac8ca4da (Initial commit)
 // import { validateDto } from "../../common/middleware/validate-dto";
 // import { UserRegisterDto, UserLoginDto } from "../dtos/user-auth.dto.ts";
 
@@ -16,7 +20,12 @@ const service = new UserAuthService();
  */
 
 const handleError = (err: any, res: Response) => {
+<<<<<<< HEAD
   console.log("Error:", err.message);
+=======
+  // Use structured logger instead of console.log for better observability
+  logger.error(err?.message ?? 'Unhandled error in auth controller', { stack: err?.stack });
+>>>>>>> ac8ca4da (Initial commit)
   const dbErrorCodes = [
     "ECONNREFUSED",
     "ER_ACCESS_DENIED_ERROR",

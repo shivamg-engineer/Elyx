@@ -1,0 +1,439 @@
+/* fee management ------------------*/
+.wrapper {
+  padding: 20px 30px;
+}
+
+/* Heading */
+.title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* ============================ */
+/* Student Info Box */
+/* ============================ */
+
+.infoCard {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 20px;
+}
+
+.infoRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.infoLabel {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.infoValue {
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+/* ============================ */
+/* Summary Cards */
+/* ============================ */
+
+.summaryRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.summaryCard {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.summaryCard label {
+  font-size: 14px;
+  color: #374151;
+}
+
+.totalFee {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.paidAmount {
+  color: #059669;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.balanceAmount {
+  color: #d97706;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+/* ============================ */
+/* Tabs */
+/* ============================ */
+
+.tabsRow {
+  display: flex;
+  gap: 10px;
+}
+
+.tab {
+  background: #f3f4f6;
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #374151;
+}
+
+.activeTab {
+  background: white;
+  border: 1px solid #e5e7eb;
+  font-weight: 600;
+}
+
+/* fee structue------------------------- */
+.page {
+  padding: 24px 24px 32px;
+  background: #f5f7fb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Top mini-tabs */
+.topTabs {
+  display: inline-flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  border-radius: 999px;
+  background: #e5edf5;
+  padding: 4px;
+}
+
+.topTab {
+  border: none;
+  background: transparent;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+  color: #4b5563;
+  transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.topTabActive {
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.15);
+}
+
+/* Card */
+.card {
+  margin-top: 8px;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  overflow: hidden;
+}
+
+.cardHeader {
+  padding: 18px 24px 10px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 4px;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  font-size: 13px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 80px 150px 1fr 120px 120px 130px;
+  align-items: center;
+  padding: 10px 24px;
+  column-gap: 16px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.headerRow {
+  background: #f9fafb;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+/* Cells */
+.cell {
+  display: flex;
+  align-items: center;
+}
+
+.selectCol {
+  justify-content: flex-start;
+}
+
+.categoryCol {
+  min-width: 120px;
+}
+
+.descriptionCol {
+  min-width: 220px;
+}
+
+.amountCol,
+.statusCol,
+.dateCol {
+  justify-content: flex-start;
+}
+
+/* Toggle */
+.toggle {
+  width: 32px;
+  height: 16px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.toggleKnob {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #d1d5db;
+  position: absolute;
+  left: 2px;
+  transition: transform 0.16s ease, background 0.16s ease;
+}
+
+.toggleOn {
+  background: #0f766e;
+  border-color: #0f766e;
+}
+
+.toggleOn .toggleKnob {
+  transform: translateX(14px);
+  background: #ffffff;
+}
+
+/* Category pill */
+.categoryPill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  font-size: 12px;
+  color: #4b5563;
+  white-space: nowrap;
+}
+
+/* Status chips */
+.statusChip {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.statusPaid {
+  background: #e0fbea;
+  color: #15803d;
+}
+
+.statusPending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* Small helpers for responsiveness */
+@media (max-width: 1200px) {
+  .row {
+    grid-template-columns: 70px 130px 1fr 100px 110px 110px;
+  }
+}
+
+@media (max-width: 900px) {
+  .page {
+    padding: 16px;
+  }
+
+  .row {
+    grid-template-columns: 60px 120px 1fr;
+    grid-template-areas:
+      "select category amount"
+      ". description description"
+      ". status date";
+    row-gap: 4px;
+    align-items: start;
+  }
+
+  .selectCol {
+    grid-area: select;
+  }
+
+  .categoryCol {
+    grid-area: category;
+  }
+
+  .descriptionCol {
+    grid-area: description;
+  }
+
+  .amountCol {
+    grid-area: amount;
+  }
+
+  .statusCol {
+    grid-area: status;
+  }
+
+  .dateCol {
+    grid-area: date;
+  }
+}
+
+/* payment history ---------------------------------*/
+.page {
+  padding: 20px 30px;
+}
+
+/* ========= Tabs ========= */
+
+.topTabs {
+  display: inline-flex;
+  gap: 10px;
+  padding: 4px;
+  border-radius: 10px;
+  background: #e5edf5;
+  margin-bottom: 18px;
+}
+
+.topTab {
+  border: none;
+  background: transparent;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #374151;
+}
+
+.activeTab {
+  background: white;
+  border: 1px solid #e5e7eb;
+  font-weight: 600;
+}
+
+/* ========= Card ========= */
+
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 20px 25px;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* ========= Table Layout ========= */
+
+.row {
+  /* display: grid;
+  grid-template-columns: 200px 160px 150px 160px 150px; */
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #e5e7eb;
+  align-items: center;
+}
+
+.headerRow {
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Columns */
+.colId {
+  font-weight: 500;
+}
+
+.colMode {
+  display: flex;
+}
+
+.colStatus {
+  display: flex;
+}
+
+/* Payment mode pill */
+.modePill {
+  background: #f3f4f6;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  border: 1px solid #d1d5db;
+}
+
+/* Completed status pill */
+.statusPill {
+  background: #0d9488;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+}

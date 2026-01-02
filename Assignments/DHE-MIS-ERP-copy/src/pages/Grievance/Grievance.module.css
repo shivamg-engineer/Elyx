@@ -1,0 +1,67 @@
+
+/* TOP PAGE TITLES */
+.pageTitle {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.pageSubtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+
+/* TABS CONTAINER */
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 10px;
+  border-radius: 8px;
+  width: fit-content;
+  margin-bottom: 25px;
+}
+
+
+/* TAB BUTTON */
+.tab {
+  padding: 10px 20px;
+  border-radius: 6px;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.tab:hover {
+  background: #eef2f5;
+}
+
+/* ACTIVE TAB STYLE */
+.activeTab {
+  background: #0b5c6a !important;
+  color: white !important;
+  font-weight: 600;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .tabs {
+    width: 100%;
+    justify-content: space-between;
+    padding: 8px;
+  }
+
+  .tab {
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+  }
+}

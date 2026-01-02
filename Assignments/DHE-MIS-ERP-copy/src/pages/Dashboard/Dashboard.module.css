@@ -1,0 +1,111 @@
+body {
+  font-family: "Inter", sans-serif;
+  background: #f7f9fc;
+  margin: 0;
+  /* padding: 20px; */
+}
+
+.dashboard {
+  width: 100%;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.header p {
+  margin: 4px 0 20px;
+  color: #666;
+}
+
+.cards_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #e0e7eb; /* Light gray */
+}
+.card {
+  background: white;
+  /* width: 70%; */
+  padding: 20px;
+  border:1px solid #e0e7eb;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.metric_card .metric-title {
+  color: #666;
+  font-size: 14px;
+}
+
+.metric_value {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.metric_sub {
+  color: #3cb371;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.section_title {
+  margin: 30px 0 10px;
+  font-weight: 600;
+}
+
+.quick_actions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.action_card {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 15px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.blue { background: #4d8dff; }
+.purple { background: #a66bff; }
+.orange { background: #ff8a4d; }
+.green { background: #4dce73; }
+
+.analytics_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.chart-card canvas {
+  width: 100%;
+  height: 240px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cards_grid, .quick_actions, .analytics_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards_grid, .quick_actions, .analytics_grid {
+    grid-template-columns: 1fr;
+  }
+}

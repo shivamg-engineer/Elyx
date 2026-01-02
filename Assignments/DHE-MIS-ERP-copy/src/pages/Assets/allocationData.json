@@ -1,0 +1,102 @@
+[
+  {
+    "code": "COMP0001",
+    "name": "Desktop Computer 1",
+    "category": "Desktop",
+    "type": "Computer",
+    "value": "₹3,499",
+    "allocated": false,
+    "staff": "",
+    "since": ""
+  },
+  {
+    "code": "COMP0002",
+    "name": "Desktop Computer 2",
+    "category": "Desktop",
+    "type": "Computer",
+    "value": "₹3,888",
+    "allocated": true,
+    "staff": "Staff Member 2",
+    "since": "15 Feb 2019"
+  },
+  {
+    "code": "COMP0003",
+    "name": "Desktop Computer 3",
+    "category": "Desktop",
+    "type": "Computer",
+    "value": "₹4,277",
+    "allocated": true,
+    "staff": "Staff Member 3",
+    "since": "15 Mar 2020"
+  },
+  {
+    "code": "COMP0004",
+    "name": "Desktop Computer 4",
+    "category": "Desktop",
+    "type": "Computer",
+    "value": "₹7,776",
+    "allocated": true,
+    "staff": "Staff Member 4",
+    "since": "15 Apr 2021"
+  },
+  {
+    "code": "COMP0005",
+    "name": "Desktop Computer 5",
+    "category": "Desktop",
+    "type": "Computer",
+    "value": "₹14,040",
+    "allocated": true,
+    "staff": "Staff Member 5",
+    "since": "15 May 2022"
+  },
+  {
+    "code": "COMP0006",
+    "name": "Desktop Computer 6",
+    "category": "Desktop",
+    "type": "Computer",
+    "value": "₹25,200",
+    "allocated": true,
+    "staff": "Staff Member 6",
+    "since": "15 Jun 2023"
+  },
+  {
+    "code": "COMP0007",
+    "name": "Desktop Computer 7",
+    "category": "Desktop",
+    "type": "Computer",
+    "value": "₹5,832",
+    "allocated": true,
+    "staff": "Staff Member 7",
+    "since": "15 Jul 2018"
+  },
+  {
+    "code": "COMP0008",
+    "name": "Desktop Computer 8",
+    "category": "Desktop",
+    "type": "Computer",
+    "value": "₹6,221",
+    "allocated": true,
+    "staff": "Staff Member 8",
+    "since": "15 Aug 2019"
+  },
+  {
+    "code": "COMP0009",
+    "name": "Desktop Computer 9",
+    "category": "Desktop",
+    "type": "Computer",
+    "value": "₹6,610",
+    "allocated": false,
+    "staff": "",
+    "since": ""
+  },
+  {
+    "code": "COMP0010",
+    "name": "Desktop Computer 10",
+    "category": "Desktop",
+    "type": "Computer",
+    "value": "₹11,664",
+    "allocated": true,
+    "staff": "Staff Member 10",
+    "since": "15 Oct 2021"
+  }
+]

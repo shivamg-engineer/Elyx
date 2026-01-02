@@ -1,0 +1,47 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: #333;
+}
+
+.code {
+  font-size: 100px;
+  font-weight: 800;
+  color: #ff4d4d;
+  margin-bottom: 10px;
+}
+
+.message {
+  font-size: 20px;
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+}
+
+.button {
+  padding: 12px 22px;
+  background-color: #0161fd;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.button_outline {
+  padding: 12px 22px;
+  border: 2px solid #0161fd;
+  background: white;
+  color: #0161fd;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}

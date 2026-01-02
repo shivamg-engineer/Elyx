@@ -1,0 +1,97 @@
+1. Route Protection (RBAC) - Not Implemented
+- All routes are accessible without authentication check
+- ProtectedRoute.tsx file was empty (now implemented but needs to be used)
+
+2. RTI Application Form (/rti)
+- No form state management - all inputs are uncontrolled
+- No form validations:
+  - Mobile number validation missing (should be exactly 10 digits, numeric only)
+  - Full name validation missing (should contain only alphabets and spaces)
+  - Pincode validation missing (should be exactly 6 digits, numeric only)
+  - Identity number validation missing
+  - Required fields not validated
+- Save Draft button not functional (no handler, no localStorage persistence)
+- "Proceed to Payment" button doesn't validate form before proceeding
+- File upload only logs to console, doesn't store files
+- No form data persistence
+
+3. Grievance Lodge Form (/grievance)
+- No form state management - all inputs are uncontrolled
+- Complainant Details form missing validations:
+  - Phone number validation missing (should be exactly 10 digits)
+  - Full name validation missing (should contain only alphabets and spaces)
+  - Employee ID validation missing
+- Grievance Details form missing validations:
+  - Incident date validation missing (should not be future date, should be valid date format)
+  - Subject and description required field validation missing
+  - Category and Nature required field validation missing
+- Save Draft button not functional (no handler, no localStorage persistence)
+- Submit Grievance button doesn't validate form or handle submission
+- File upload not functional (no file handling, only UI)
+- Employee checkbox not functional (no state management)
+
+4. Institute Registration Form (/institute-registration/register)
+- No form state management - all inputs are uncontrolled
+- No form validations on any fields:
+  - Mobile number validation missing (10 digits)
+  - Name validation missing (alphabets only)
+  - Pincode validation missing (6 digits)
+  - Required fields not validated
+- Save Draft button not functional (no handler, no localStorage persistence)
+- "Next Step" button doesn't validate form or handle navigation
+- File upload only logs to console
+- Tab navigation (Part A, B, C) not functional - all tabs show same content, no state management
+- Progress bar is hardcoded, doesn't reflect actual progress
+
+5. Settings - Profile Tab (/settings)
+- No form state management - inputs are uncontrolled
+- Save Changes button not functional (no form submission handler)
+- Reset button not functional (no reset handler)
+- No form validations on profile fields (email format, phone number format)
+- Profile data is hardcoded, form doesn't load actual user data from localStorage
+- Form doesn't prevent submission with invalid data
+
+6. Language Switcher
+- Language switcher in Header doesn't persist across page navigation (resets on page change)
+- Language preference not stored in localStorage
+- Language switcher on Login page doesn't affect other components
+
+7. Routing Issues
+- Inconsistent route paths:
+  - "/institute-registration" route missing leading slash in nested route
+  - "/verification" nested route structure incorrect (should be "/verification/application")
+- No 404 page for invalid routes
+
+8. Header Component
+- User information is hardcoded (admin, admin@dhe.gov.in, System Admin)
+- Doesn't load actual user data from localStorage
+- Profile and Settings menu items not clickable (no navigation handlers)
+
+9. Form State Management
+- All forms lack proper state management (uncontrolled inputs)
+- No persistence of form data when navigating away
+- No draft saving functionality implemented anywhere
+- Forms reset on page refresh
+
+10. File Upload Functionality
+- File uploads in RTI, Grievance, and Institute Registration only log to console
+- No file validation (size, type)
+- No file preview or removal functionality
+- Files are not stored or persisted
+- No visual feedback when files are selected
+
+11. Missing Error Handling
+- No error messages displayed to users
+- Console.log statements left in production code (Login.tsx line 107, RTI.tsx line 10, InstituteRegister.tsx line 12)
+- No user feedback for form submission errors
+
+12. OTP Timer
+- Timer resets but doesn't actually resend OTP
+- No actual OTP generation or verification logic
+- Demo message says "enter any 6-digit code" - should have proper OTP validation
+
+13. Student Registration Form (/students)
+- Registration form has no state management
+- No validations on student registration fields
+- Form data not persisted
+- No form submission handling

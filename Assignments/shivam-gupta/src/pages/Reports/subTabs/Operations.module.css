@@ -1,0 +1,57 @@
+/* ------------------------------
+   OPERATIONS GRID LAYOUT
+------------------------------ */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+/* ------------------------------
+   CARD STYLING
+------------------------------ */
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+
+/* ------------------------------
+   CARD TITLE + SUBTITLE
+------------------------------ */
+.title {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+/* ------------------------------
+   LEGEND (USED IN PIE CHARTS)
+------------------------------ */
+.legendRow {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  gap: 4px;
+}
+
+.legendDot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}

@@ -1,0 +1,360 @@
+/* ------------------------------
+   PAGE WRAPPER
+------------------------------ */
+.page {
+  padding: 28px;
+  background: #f8f9fb;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.pageTitle {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.subtitle {      /* ⚠️ NOT USED BY ANY COMPONENT */
+  color: #666;
+  margin-top: 4px;
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.tab {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.activeTab {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+/* SECTION TITLES */
+.sectionTitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 24px;
+}
+
+.sectionDesc {
+  color: #666;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* TIME FILTER */
+.filterRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.timeFilter {
+  padding: 8px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* CARD GRID (NOT USED NOW) */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 20px;
+}
+
+/* SIMPLE HOME CARDS (ALSO UNUSED NOW) */
+.card {
+  background: white;
+  padding: 18px;
+  border: 1px solid #ececec;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardLabel {
+  color: #666;
+  font-size: 14px;
+}
+
+.cardValue {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.iconBox {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blueIcon {
+  background: #e0edff;
+  color: #2563eb;
+}
+
+.greenIcon {
+  background: #e6f8ed;
+  color: #15803d;
+}
+
+.purpleIcon {
+  background: #f0e7ff;
+  color: #7c3aed;
+}
+
+.orangeIcon {
+  background: #fff4e5;
+  color: #d97706;
+}
+
+/* EMPTY STATE */
+.emptyBox {
+  background: white;
+  border: 1px solid #e5e5e5;
+  padding: 40px;
+  text-align: center;
+  margin-top: 28px;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #666;
+}
+
+/* ------------------------------
+   REPORT GENERATOR FORM
+------------------------------ */
+.reportContainer {
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Section header */
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sectionSubtitle {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+/* Report Card */
+.reportCard {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* INPUT LABELS */
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.required {
+  color: #d9534f;
+  margin-left: 4px;
+  font-size: 12px;
+}
+
+.error {
+  font-size: 12px;
+  color: #d9534f;
+}
+
+/* INPUT FIELDS */
+.selectInput,
+.dateInput {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  font-size: 14px;
+  background: #fff;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.selectInput:focus,
+.dateInput:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.4);
+}
+
+/* ICON INSIDE INPUT */
+.inputWithIcon {
+  position: relative;
+}
+
+.inputWithIcon .icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #6c757d;
+}
+
+.inputWithIcon input {
+  padding-left: 36px;
+}
+
+/* GRID (2 FIELDS) */
+.rowTwo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+/* BUTTONS */
+.btnRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.generateBtn {
+  flex: 1;
+  background: #0b5d65;
+  color: white;
+  padding: 12px;
+  border: none;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.generateBtn:hover {
+  background: #094f56;
+}
+
+.clearBtn {
+  background: #f8f9fa;
+  color: #333;
+  padding: 12px 18px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.clearBtn:hover {
+  background: #ececec;
+}
+
+/* QUICK REPORTS SECTION */
+.quickReports {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.quickTitle {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.quickSub {
+  font-size: 14px;
+  color: #6c757d;
+  margin-top: -6px;
+}
+
+.quickList {
+  display: flex;
+  gap: 14px;
+}
+
+.quickItem {
+  background: #f1f8ff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #dceaff;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.2s ease;
+}
+
+.quickItem:hover {
+  background: #e4f1ff;
+}
+
+/* SUB TABS */
+.subTab {
+  display: inline-flex;
+  gap: 16px;
+  background: #f1f4f9;
+  padding: 8px 14px;
+  border-radius: 10px;
+  margin: 10px 0 20px;
+}
+
+.subTab button {
+  background: transparent;
+  border: none;
+  padding: 8px 14px;
+  font-size: 14px;
+  color: #4a4a4a;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.subTab button:hover {
+  color: #222;
+}
+
+.active {
+  background: #ffffff !important;
+  font-weight: 600;
+  color: #000;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+}

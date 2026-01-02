@@ -1,0 +1,197 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.page {
+  padding: 28px;
+  background: #f8fafc;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* HEADER */
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.subtitle {
+  color: #555;
+  font-size: 14px;
+}
+
+/* ROLE TABS */
+.roleTabs {
+  display: flex;
+  gap: 12px;
+  margin: 18px 0 20px;
+}
+
+.roleBtn {
+  padding: 8px 18px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.activeRole {
+  background: #035d7f;
+  color: white;
+  border-color: #035d7f;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 22px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 600;
+}
+.cardSub {
+  color: #777;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+/* FILTERS */
+.filtersRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+/* SEARCH BOX WRAPPER */
+.searchWrapper {
+  position: relative;
+  flex: 1; /* search bar will expand */
+}
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 15px;
+  color: #6b7280;
+}
+
+/* SEARCH INPUT */
+.searchInput {
+  width: 100%;
+  padding: 10px 14px 10px 36px; /* left padding for icon */
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 14px;
+  color: #374151;
+}
+
+/* SELECT DROPDOWNS */
+.filterSelect {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  font-size: 14px;
+  min-width: 140px;
+  height: 40px; /* same height as search input */
+  cursor: pointer;
+}
+
+/* STATS */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.statBox,
+.statBoxBlue,
+.statBoxGreen,
+.statBoxOrange {
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: white;
+}
+
+.statBoxBlue { background: #eaf2ff; }
+.statBoxGreen { background: #e8f8ef; }
+.statBoxOrange { background: #fff6e5; }
+
+.statValue {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+/* TABLE */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+}
+
+.table th {
+  text-align: left;
+  padding: 12px;
+  font-size: 13px;
+  color: #444;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+}
+
+/* STATUS BADGES */
+.status {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.blue {
+  background: #e1effe;
+  color: #1d4ed8;
+}
+
+.red {
+  background: #ffe2e2;
+  color: #b91c1c;
+}
+
+.green {
+  background: #d1f1dd;
+  color: #166534;
+}
+
+.gray {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+/* VIEW BUTTON */
+.viewBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: #045d78;
+  cursor: pointer;
+  font-size: 14px;
+}

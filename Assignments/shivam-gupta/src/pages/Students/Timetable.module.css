@@ -1,0 +1,201 @@
+.page {
+  padding: 20px 30px;
+}
+
+/* Titles */
+.title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 18px;
+}
+
+/* Card */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sectionSub {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 18px;
+}
+
+/* Week Strip */
+.weekStrip {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  padding: 6px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.dayBox {
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 6px;
+}
+
+.activeDay {
+  background: white;
+  border: 1px solid #e5e7eb;
+}
+
+.dayName {
+  display: block;
+  font-weight: 600;
+}
+
+.dayDate {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Date row */
+.dateRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.dateLabel {
+  font-size: 14px;
+}
+
+.classCount {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Class card */
+.classCard {
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  padding: 18px 20px;
+  margin-bottom: 12px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.classTitle {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.typeBadge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.lectureBadge {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.practicalBadge {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.code {
+  color: #6b7280;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+/* Class details */
+.detailsRow {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.iconText {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* complete week schedule */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  margin-top: 20px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* Table Layout */
+.table {
+  width: 100%;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 140px repeat(6, 1fr);
+  padding: 15px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.headerRow {
+  font-weight: 600;
+  color: #374151;
+  padding-bottom: 12px;
+}
+
+.timeCol {
+  font-weight: 600;
+  color: #374151;
+}
+
+.dayCol {
+  text-align: center;
+  font-size: 14px;
+  color: #374151;
+}
+
+.subject {
+  font-weight: 600;
+}
+
+.room {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.empty {
+  color: #9ca3af;
+}

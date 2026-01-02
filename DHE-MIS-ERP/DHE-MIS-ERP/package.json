@@ -1,0 +1,13 @@
+{
+  "name": "dhe-mis-offline-scraper",
+  "version": "1.0.0",
+  "description": "Scrape JS-rendered pages from demo3.synthesys.in for offline use.",
+  "main": "scrape.js",
+  "scripts": {
+    "scrape": "node scrape.js"
+  },
+  "dependencies": {
+    "puppeteer": "^24.31.0",
+    "website-scraper": "^5.3.1"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "greeting": "¡Hola!",
+  "farewell": "¡Adiós!",
+  "today": "La fecha de hoy es {date}",
+  "formatted_date": "La fecha formateada es {date}",
+  "formatted_number": "El número formateado es {number}",
+  "formatted_currency": "La cantidad es {currency}",
+  "user_welcome": "¡Bienvenido de nuevo, {name}!"
+}

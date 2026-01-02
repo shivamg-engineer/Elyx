@@ -1,0 +1,181 @@
+/* TITLE ROW */
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 14px 0 20px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: white;
+  cursor: pointer;
+}
+
+.addBtn {
+  background: #047857 !important;
+  color: white;
+  border: none !important;
+}
+/* ///////// */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 20px;
+  background: #f6f7f9;
+}
+
+.summaryRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.summaryCard {
+  background: white;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.summaryCard h4 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+
+.label {
+  font-size: 12px;
+  color: #777;
+}
+
+.category {
+  background: white;
+  padding: 18px;
+  border-radius: 10px;
+  border: 1px solid #e7e7e7;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.categoryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.categoryHeader h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.availableCount {
+  background: #e9f8ef;
+  color: #1aa75b;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.combine {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 98%;
+}
+.left {
+  width: 80%;
+}
+.facilityCard {
+  width: 100%;
+
+  padding: 16px;
+
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.facilityCard h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.cartContent {
+  display: flex;
+  justify-content: space-between;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge {
+  background: #d1f1dd;
+  color: #178545;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 20px;
+  width: fit-content;
+  font-weight: 600;
+  height: fit-content;
+}
+
+.row {
+  font-size: 13px;
+  color: #444;
+  display: flex;
+  gap: 6px;
+}
+.cardTitleRow {
+  display: flex;
+  gap: 10px;
+}
+.combine {
+  display: flex;
+}
+
+.category {
+  .combine {
+    width: 100%;
+    flex-direction: unset;
+    justify-content: space-between;
+    background: #fafffa;
+    border-left: 4px solid #22c55e;
+    border-radius: 8px;
+    border: 1px solid #e3f3e7;
+
+    .left {
+        width: 80%;
+       padding: 20px;
+        .facilityCard {
+            display: unset;
+        }
+    }
+    .right {
+        padding-top: 40px;
+        padding-right: 40px;
+     
+    }
+  }
+}

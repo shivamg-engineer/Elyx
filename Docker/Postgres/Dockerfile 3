@@ -1,0 +1,13 @@
+# Use the official PostgreSQL 14 image
+FROM postgres:14
+
+# Set environment variables for default user, password, and database
+ENV POSTGRES_DB=superset
+ENV POSTGRES_USER=superset
+ENV POSTGRES_PASSWORD=superset
+
+# Optional: Copy SQL files to initialize the database
+# COPY init.sql /docker-entrypoint-initdb.d/
+
+# Expose the default PostgreSQL port
+EXPOSE 5432

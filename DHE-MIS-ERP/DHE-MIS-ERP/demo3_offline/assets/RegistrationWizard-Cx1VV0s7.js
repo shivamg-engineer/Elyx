@@ -1,0 +1,1 @@
+import{j as r}from"./ui-vendor-8V_oKEeO.js";import{aq as o}from"./institute-BF3Og4ow.js";import"./react-vendor-CNUWQFbP.js";import"./form-vendor-B1G7pw6y.js";import"./chart-vendor-DjRgKakx.js";import"./query-vendor-B0hUVdFE.js";const t=()=>r.jsx("div",{className:"container mx-auto py-6",children:r.jsx(o,{})});export{t as RegistrationWizard,t as default};

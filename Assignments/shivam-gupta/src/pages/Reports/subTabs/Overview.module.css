@@ -1,0 +1,54 @@
+/* ------------------------------
+   WRAPPER GRID
+------------------------------ */
+.gridWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  padding: 20px;
+}
+
+/* ------------------------------
+   CARD
+------------------------------ */
+.card {
+  background: #ffffff;
+  padding: 18px 22px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.card p {
+  color: #777;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+/* ------------------------------
+   PIE LEGEND
+------------------------------ */
+.legendRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  gap: 4px;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}

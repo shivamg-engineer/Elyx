@@ -1,0 +1,197 @@
+/* Full-page wrapper */
+.login_page {
+  background-color: #e0e7ff;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+/* Main centered layout */
+.container {
+  display: flex;
+  /* background-color: #09585a; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 95vh;
+  gap: 1rem;
+}
+
+.language_btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #cfd8ea;
+  font-size: 1rem;
+  color: #166169;
+}
+
+/* Header */
+.header {
+  max-width: 420px;
+}
+
+.title {
+  margin: 0;
+  font-size: 22px;
+}
+
+.subtitle {
+  margin-top: 4px;
+  color: #67777e;
+  font-size: 14px;
+}
+
+/* Circular badge */
+.badge {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1rem auto;
+  border-radius: 50%;
+  background-color: #166169e6;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* LOGIN CARD */
+.login_container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+
+  border: #e0e7ff 2px solid;
+  text-align: left;
+  border-radius: 12px;
+  border: 2px solid #e0e7ff;
+  padding: 2rem;
+  height: 450px;
+  width: 350px;
+  gap: 0.7rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.small_text {
+  color: #67777e;
+  margin-top: 2px;
+  /* margin-bottom: 1rem; */
+}
+
+/* Inputs */
+.login_container input {
+  padding: 0.7rem;
+  border-radius: 6px;
+  border: 1px solid #cfd8ea;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.login_container input:focus {
+  border-color: #166169;
+}
+
+/* Buttons */
+.login_container button {
+  width: 100%;
+  padding: 0.75rem;
+  color: white;
+  border: none;
+  background-color: #166169e6;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+.login_container button:hover {
+  background: #09585a;
+}
+.login_container button:active {
+  transform: scale(0.98);
+}
+p {
+  color: #67777e;
+}
+
+/* Demo text */
+.demo {
+  color: #67777e;
+  font-size: 13px;
+}
+
+/* Footer */
+.footer {
+  color: #67777e;
+  font-size: 13px;
+  max-width: 420px;
+  line-height: 1.4;
+}
+.error {
+  color: #d33;
+  font-size: 13px;
+  margin-top: -4px;
+  margin-bottom: 8px;
+}
+
+/* otp css */
+.otp_boxes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 1rem 0;
+}
+
+.otp_boxes input {
+  width: 45px;
+  height: 55px;
+  text-align: center;
+  border: 1px solid #cfd8ea;
+  border-radius: 6px;
+  font-size: 28px;
+   line-height: 55px;          /* centers the number vertically */
+  padding: 0;  
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.otp_boxes input:focus {
+  border-color: #166169;
+}
+
+.logged_in_as {
+  color: #166169;
+  font-size: 14px;
+}
+
+.resend {
+  color: #166169;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.resend span {
+  color: #67777e;
+}
+.resend_link {
+  color: #166169;
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: underline;
+}

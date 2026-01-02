@@ -1,0 +1,220 @@
+/* Main white card */
+.card {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Title */
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 18px;
+}
+
+/* Tabs */
+.tabsWrapper {
+  display: flex;
+  border-radius: 8px;
+  background: #f3f4f6;
+  padding: 4px;
+  gap: 6px;
+  margin-bottom: 25px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.activeTab {
+  background: white;
+  color: #111827;
+  font-weight: 600;
+  border: 1px solid #e5e7eb;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.group label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.group input,
+.group select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  font-size: 14px;
+}
+
+/* Checkbox row */
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  margin-left: 3px;
+}
+
+/* Next Button */
+.bottomRight {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+}
+
+.nextBtn {
+  background: #0d9488;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.nextBtn:hover {
+  background: #0b7f75;
+}
+
+/* fee management ------------------*/
+.wrapper {
+  padding: 20px 30px;
+}
+
+/* Heading */
+.title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* ============================ */
+/* Student Info Box */
+/* ============================ */
+
+.infoCard {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 20px;
+}
+
+.infoRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.infoLabel {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.infoValue {
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+/* ============================ */
+/* Summary Cards */
+/* ============================ */
+
+.summaryRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.summaryCard {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.summaryCard label {
+  font-size: 14px;
+  color: #374151;
+}
+
+.totalFee {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.paidAmount {
+  color: #059669;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.balanceAmount {
+  color: #d97706;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+
+/*---------------------------- Tabs */
+
+
+.tabsRow {
+  display: flex;
+  gap: 10px;
+}
+
+.tab {
+  background: #f3f4f6;
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #374151;
+}
+
+.activeTab {
+  background: white;
+  border: 1px solid #e5e7eb;
+  font-weight: 600;
+}
+
